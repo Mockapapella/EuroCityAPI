@@ -11,6 +11,7 @@ def country_response(request, city_name):
         country_object.request_number += 1
         country_object.save()
         country = {"country": country_object.country_name}
+        return JsonResponse(country)
     except IndexError:
         country = requests.get(
             f"https://restcountries.eu/rest/v2/capital/{city_name}", params=request.GET
