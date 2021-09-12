@@ -15,7 +15,7 @@ python manage.py runserver
 
 # GET request
 
-### case insensitive
+### case insensitive, handles English variants
 
 ```
 curl http://localhost:8000/country/london/
@@ -25,7 +25,7 @@ curl http://localhost:8000/country/LoNdOn/
 ### cities outside of europe return 400 error
 
 ```
-curl http://localhost:8000/country/moon/
+curl http://localhost:8000/country/beijing/
 ```
 
 ### any other queries return 404 error
@@ -33,4 +33,5 @@ curl http://localhost:8000/country/moon/
 ```
 curl http://localhost:8000/country/moon/
 curl http://localhost:8000/country/❤️/
+curl http://localhost:8000/country/Kyïv/
 ```
