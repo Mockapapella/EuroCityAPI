@@ -14,13 +14,9 @@ def country_response(request, city_name):
         country_object.save()
         country = {"country": country_object.country_name}
     except IndexError:
-        print("BEFORE")
         country = requests.get(
             f"https://restcountries.eu/rest/v2/capital/{city_name}", params=request.GET
         )
-        print("AFTER")
-        pprint(dir(country))
-        print(country.status_code)
         if country.status_code == 400:
             return JsonResponse(
                 data={"status": 400, "message": "Bad request syntax or unsupported method"},
