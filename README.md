@@ -33,5 +33,5 @@ curl http://localhost:8000/country/beijing/
 ```
 curl http://localhost:8000/country/moon/
 curl http://localhost:8000/country/❤️/
-curl http://localhost:8000/country/Kyïv/
+curl http://localhost:8000/country/København/
 ```
