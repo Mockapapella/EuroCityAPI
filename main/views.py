@@ -1,5 +1,3 @@
-from pprint import pprint
-
 import requests
 from django.http import JsonResponse
 
